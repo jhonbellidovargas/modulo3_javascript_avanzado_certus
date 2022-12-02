@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="" href="" />
+    <meta name="description" content="Curso de HTML-JS-CSS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS del proyecto -->
+    <link rel="stylesheet" type="text/css" href="" />
+    <title>Pagina Principal</title>
+  </head>
+  <body>
+    <header></header>
+    <nav></nav>
+    <main>
+      <section>
+        <form action="procesar.php" method="post" onsubmit="return Validar()">
+          <p>
+            <label for="txtDni">Ingrese DNI:</label>
+            <input type="text" id="txtDni" maxlength="8" required />
+          </p>
+          <p id="msgValDni"></p>
+          <p>
+            <label for="txtNombre">Ingrese Nombre:</label>
+            <input type="text" id="txtNombre" />
+          </p>
+          <p id="msgValNombre"></p>
+
+          <p>
+            <label for="txtTel">Ingrese Telefono:</label>
+            <input type="text" id="txtTel" />
+          </p>
+          <p id="msgValTel"></p>
+
+          <p>
+            <label for="txtPwd">Ingrese Password:</label>
+            <input type="password" id="txtPwd" />
+          </p>
+          <p id="msgValPwd"></p>
+
+          <p>
+            <label for="txtEmail">Ingrese Email:</label>
+            <input type="email" id="txtEmail" />
+          </p>
+          <p id="msgValEmail"></p>
+          <p>
+            <input type="submit" value="Enviar" id="btnEnviar" />
+          </p>
+        </form>
+        <p id="mensaje"></p>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
+<script src="js/index.js"></script>
