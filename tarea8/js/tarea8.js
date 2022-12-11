@@ -5,6 +5,7 @@ $(document).ready(function () {
   console.log("jquery funcionando");
   $("#btnEnviar").click(function () {
     console.log("click");
+    
     var nombre = $("#txtNombre").val();
     var apellido = $("#txtApellido").val();
     var correo = $("#txtCorreo").val();
