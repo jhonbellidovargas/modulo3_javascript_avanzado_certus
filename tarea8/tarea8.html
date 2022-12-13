@@ -18,101 +18,136 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- CSS del proyecto -->
-    <link rel="stylesheet" type="text/css" href="" />
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/2c36e9b7b1.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS del proyecto -->
+    <link rel="stylesheet" type="text/css" href="" />
     <title>Sesión 8</title>
   </head>
   <body>
-    <section
-      style="background-color: #7d87e4; min-height: 100vh"
-      class="d-flex justify-content-center align-items-center h-100"
-    >
-      <section class="container py-3">
+    <section style="background-color: #0e7a5f; min-height: 100vh">
+      <section class="container py-5 h-100">
         <section
           class="row d-flex justify-content-center align-items-center h-100"
         >
           <section class="col-lg-8 col-xl-6">
-            <section
-              class="card rounded-3"
-              style="box-shadow: 0 0 10px 0 rgba(228, 227, 227, 0.568)"
-            >
-              <section class="card-body p-2 p-md-3">
-                <h3 class="mb-1 pb-1 pb-md-0 mb-md-3 px-md-1 text-center">
-                  Formulario de datos
+            <section class="card rounded-3">
+              <section class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 text-center">
+                  Validacion de formularios
                 </h3>
                 <form class="px-md-2">
                   <section class="row">
                     <section class="col-md-6 form-outline mb-2">
-                      <label class="form-label" for="txtNombre">Nombre</label>
-                      <input type="text" id="txtNombre" class="form-control" />
-                      <p id="errorNombre" class="text-danger"></p>
+                      <label class="form-label" for="txtUsuario">Usuario</label>
+                      <section class="input-group">
+                        <input
+                          type="text"
+                          id="txtUsuario"
+                          class="form-control"
+                        />
+                        <span class="input-group-text d-none" id="usuarioCheck">
+                          <i class="fas"></i>
+                        </span>
+                      </section>
+                      <p id="errorUsuario" class="text-danger"></p>
                     </section>
                     <section class="col-md-6 form-outline mb-2">
-                      <label class="form-label" for="txtApellido"
-                        >Apellido</label
-                      >
-                      <input
-                        type="text"
-                        id="txtApellido"
-                        class="form-control"
-                      />
-                      <p id="errorApellido" class="text-danger"></p>
+                      <label class="form-label" for="txtNombre">Nombre</label>
+                      <section class="input-group">
+                        <input
+                          type="text"
+                          id="txtNombre"
+                          class="form-control"
+                        />
+                        <span class="input-group-text d-none" id="nombreCheck">
+                          <i class="fas"></i>
+                        </span>
+                      </section>
+                      <p id="errorNombre" class="text-danger"></p>
                     </section>
-                    <section class="col-md-12 form-outline mb-2">
+                  </section>
+                  <section class="row">
+                    <section class="col-md-6 form-outline mb-2">
+                      <label class="form-label" for="txtContraseña"
+                        >Contraseña</label
+                      >
+                      <section class="input-group">
+                        <input
+                          type="password"
+                          id="txtContraseña"
+                          class="form-control"
+                        />
+                        <span class="input-group-text d-none" id="contraseñaCheck">
+                          <i class="fas"></i>
+                        </span>
+                      </section>
+                      <p id="errorContraseña" class="text-danger"></p>
+                    </section>
+                    <section class="col-md-6 form-outline mb-2">
+                      <label class="form-label" for="txtContraseña2"
+                        >Repetir contraseña</label
+                      >
+                      <section class="input-group">
+                        <input
+                          type="password"
+                          id="txtContraseña2"
+                          class="form-control"
+                        />
+                        <span class="input-group-text d-none" id="contraseña2Check">
+                          <i class="fas"></i>
+                        </span>
+                      </section>
+                      <p id="errorContraseña2" class="text-danger"></p>
+                  </section>
+                  <section class="row">
+                    <section class="col-md-6 form-outline mb-2">
                       <label class="form-label" for="txtCorreo">Correo</label>
-                      <input type="email" id="txtCorreo" class="form-control" />
+                      <section class="input-group">
+                        <input
+                          type="text"
+                          id="txtCorreo"
+                          class="form-control"
+                        />
+                        <span class="input-group-text d-none" id="correoCheck">
+                          <i class="fas"></i>
+                        </span>
+                      </section>
                       <p id="errorCorreo" class="text-danger"></p>
                     </section>
                     <section class="col-md-6 form-outline mb-2">
-                      <label class="form-label" for="txtFecha"
-                        >Fecha de nacimiento</label
-                      >
-                      <input type="date" id="txtFecha" class="form-control" />
-                      <p id="errorFecha" class="text-danger"></p>
-                    </section>
-                    <section class="col-md-6 form-outline mb-2">
-                      <label class="form-label" for="txtGenero">Género</label>
-                      <select
-                        class="form-select"
-                        id="txtGenero"
-                        aria-label="Default select example"
-                      >
-                        <option selected>Seleccione una opción</option>
-                        <option value="1">Masculino</option>
-                        <option value="2">Femenino</option>
-                        <option value="3">Otro</option>
-                      </select>
-                      <p id="errorGenero" class="text-danger"></p>
-                    </section>
-                    <section class="d-flex justify-content-center">
-                      <button
-                        type="button"
-                        class="btn btn-success btn-lg mb-1"
-                        id="btnEnviar"
-                      >
-                        Enviar
-                      </button>
-                    </section>
+                      <label class="form-label" for="txtCelular">Celular</label>
+                      <section class="input-group">
+                        <input
+                          type="text"
+                          id="txtCelular"
+                          class="form-control"
+                        />
+                        <span class="input-group-text d-none" id="celularCheck">
+                          <i class="fas"></i>
+                        </span>
+                      </section>
+                      <p id="errorCelular" class="text-danger"></p>
                   </section>
+                  <button type="button" class="btn btn-success btn-lg mb-1" id="btnEnviar">
+                    Enviar
+                  </button>
                 </form>
               </section>
             </section>
+            
           </section>
-          <section
-            class="alert alert-success mt-1 d-none"
-            role="alert"
-            id="bannerConfirmacion"
-          >
+          <section class="alert alert-success mt-2 d-none" role="alert" id="bannerConfirmacion">
+            <h4 class="alert-heading text-center">Bien hecho!</h4>
             <p class="text-center">Los datos se enviaron correctamente</p>
           </section>
         </section>
+        
       </section>
     </section>
   </body>
